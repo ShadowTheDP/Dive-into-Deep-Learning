@@ -1,0 +1,11 @@
+D2L 限制：
+1. 程式編寫範圍僅限於相對路徑 ./Python-project/Dive-into-Deep-Learning 下。
+2. 必須且僅能使用名為 d2l_ai 的 Conda 虛擬環境進行開發。
+3. 輸出位置必須為相對路徑 ./Result-for-project/Dive-into-Deep-Learning 下。
+4. 每次專案更新後，必須在 ./Result-for-project/Dive-into-Deep-Learning/ 下提供名為 "Changing Description.txt" 的變更描述文件，供 Git 管理員進行 Commit。
+5. 路徑基準：所有路徑以專案根目錄 c:\Users\user\Desktop\Code Project 為基準，採用相對路徑（./）。
+6. 環境：優先使用名為 d2l_ai 的 Conda；若不可用，使用專案本地虛擬環境 ./.venv（或 d2l_ai_venv），Python ≥ 3.10，並於 ./Python-project/Dive-into-Deep-Learning/requirements.txt 維護相依。
+7. 資料與模型：資料放於 ./Python-project/Dive-into-Deep-Learning/data；避免提交 >100MB 檔案；模型/暫存檔不進版控，必要輸出置於第 3 點之目錄。
+8. 檔案規範：UTF-8 編碼、CRLF 換行；禁止在檔案或資料夾名稱中使用空格，請使用連字符 (-) 代替；不得在指定目錄之外新增或修改檔案；不得讀寫專案外部路徑。
+9. 變更描述內容：需包含時間戳、修改摘要、影響範圍、檔案清單（相對路徑）與可重現的執行命令/筆記及輸出位置。
+10. Notebook：請置於 notebooks 子資料夾，並於變更描述中簡述主要段落與結果摘要。

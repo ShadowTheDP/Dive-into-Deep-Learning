@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv
+venv/
+ENV/
+env/
+
+# Conda
+.conda/
+conda-meta/
+
+# IDE
+.vscode/
+.idea/
+
+# Data & Temp
+data/
+temp/
+*.log
+*.tmp
+
+# D2L Specific
+.ipynb_checkpoints
