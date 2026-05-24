@@ -18,6 +18,8 @@ conda-meta/
 # Data & Temp
 data/
 temp/
+output/
+models/
 *.log
 *.tmp
 

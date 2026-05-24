@@ -1,0 +1,10 @@
+Project: Dive-into-Deep-Learning
+
+This is the single official project change log.
+
+After each meaningful completed task, append:
+- date and time
+- short summary of the completed work
+- key files changed
+- verification notes
+- whether the work is ready to push
