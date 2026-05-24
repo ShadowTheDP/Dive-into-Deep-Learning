@@ -1,0 +1,12 @@
+name: d2l_ai
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - pip
+  - pip:
+      - torch
+      - jax
+      - d2l

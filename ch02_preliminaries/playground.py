@@ -1,25 +1,21 @@
-# File: ch02_preliminaries/playground.py
 import torch
-import numpy as np
-import jax.numpy as jnp
 
-print("--- 🚀 D2L 互動式實驗場 (Playground) ---")
 
-# --- 課後練習題 ---
-# 1. 創建一個形狀為 (3, 4, 5) 的三維張量 T
+print("--- D2L tensor reduction playground ---")
+
 T = torch.randn(3, 4, 5)
-print(f"張量 T 的形狀: {T.shape}")
+print(f"Shape of T: {tuple(T.shape)}")
 
-# 2. 沿著 axis=0 加總
-# 思考：沿著第 0 維（長度為 3）加總，該維度會消失
-sum0 = T.sum(axis=0)
-print(f"T.sum(axis=0) 的形狀: {sum0.shape}")
+sum0 = T.sum(dim=0)
+print(f"Shape after T.sum(dim=0): {tuple(sum0.shape)}")
 
-# 3. 沿著 axis=[0, 2] 加總
-# 思考：同時消除第 0 維與第 2 維
-sum02 = T.sum(axis=[0, 2])
-print(f"T.sum(axis=[0, 2]) 的形狀: {sum02.shape}")
+sum02 = T.sum(dim=(0, 2))
+print(f"Shape after T.sum(dim=(0, 2)): {tuple(sum02.shape)}")
 
-print("\n--- 💡 導師提示 ---")
-print("在深度學習中，sum(axis=i) 會『壓扁』第 i 個維度。")
-print("如果你看到形狀從 (3, 4, 5) 變成 (4, 5)，代表你已經成功理解了降維邏輯！")
+mean1 = T.mean(dim=1)
+print(f"Shape after T.mean(dim=1): {tuple(mean1.shape)}")
+
+print("\nNotes")
+print("- Reducing along one axis removes that axis from the result.")
+print("- Reducing along multiple axes removes all of those axes.")
+print("- Use this file as a quick sandbox before editing chapter code.")

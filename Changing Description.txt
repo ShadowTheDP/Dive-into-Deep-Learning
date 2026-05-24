@@ -8,3 +8,14 @@ After each meaningful completed task, append:
 - key files changed
 - verification notes
 - whether the work is ready to push
+
+2026-05-24 19:48
+- Summary: Improved onboarding quality by adding a tracked environment manifest,
+  cleaning the environment report, and fixing the chapter 2 starter scripts.
+- Key files changed: `README.md`, `environment.yml`, `verify_env.py`,
+  `tensor_lab.py`, `ch02_preliminaries/data_manipulation.py`,
+  `ch02_preliminaries/playground.py`
+- Verification notes: The README now includes reproducible environment creation
+  steps, and the starter scripts use clean output plus CPU-safe behavior where
+  appropriate.
+- Ready to push: yes, after normal review and local smoke testing.

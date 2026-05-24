@@ -57,6 +57,13 @@ Current expected environment:
 - Python 3.9 is the currently documented baseline in this repo
 - Main libraries: `torch`, `numpy`, `jax`, `d2l`
 
+If the environment does not exist yet, create the baseline environment from the
+tracked manifest:
+
+```powershell
+conda env create -f environment.yml
+```
+
 Activate:
 
 ```powershell
@@ -66,12 +73,16 @@ conda activate d2l_ai
 Practical rule:
 
 - Prefer using the existing `d2l_ai` Conda environment first.
-- If the environment changes later, update this README or add an explicit
-  environment manifest.
+- If the environment changes later, update `environment.yml` and this README in
+  the same task.
+- If you need platform-specific accelerator packages later, adjust them after
+  the baseline environment is created.
 
-Note:
-This repo currently does not include a full `requirements.txt` or
-`environment.yml`, so the existing environment is still the source of truth.
+Tracked environment file:
+
+- `environment.yml`
+  - Baseline environment manifest for recreating the documented `d2l_ai`
+    environment.
 
 ## First Useful Commands
 
@@ -98,6 +109,9 @@ Run the tensor lab:
 ```powershell
 python tensor_lab.py
 ```
+
+`tensor_lab.py` is a device-aware smoke test. It uses CUDA when available and
+falls back to CPU when it is not.
 
 ## Inputs
 
@@ -139,10 +153,13 @@ Top-level files and folders:
 - `Changing Description.txt`
   - The single official project change log. Update it after completed work,
     especially before pushing to GitHub.
+- `environment.yml`
+  - Baseline Conda environment manifest for recreating `d2l_ai`.
 - `tensor_lab.py`
-  - Quick tensor or accelerator sanity-check script.
+  - Quick tensor or accelerator sanity-check script with CPU fallback.
 - `verify_env.py`
   - Environment verification script for `torch`, `numpy`, `jax`, and `d2l`.
+  - Prints package versions and available accelerator/device information.
 - `ch02_preliminaries/`
   - Current chapter-specific practice folder for D2L chapter 2 work.
 - `output/`
@@ -191,8 +208,7 @@ Before pushing to GitHub, check:
 
 ## Current Gaps
 
-- No reproducible environment manifest is checked in yet.
-- Some existing console text appears to have encoding issues and may need a
-  later UTF-8 cleanup pass.
+- Accelerator-specific package tuning may still require local adjustment after
+  creating the baseline environment.
 - The current repo has chapter 2 practice files, but future chapters still need
   a consistent expansion pattern as the learning work grows.
