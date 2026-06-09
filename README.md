@@ -142,6 +142,19 @@ output/ch03_linear-networks/
 
 Generated output should stay local unless there is a clear reason to track it.
 
+## Current Agent Handoff
+
+When an AI agent enters this repo, use this order:
+
+1. `README.md`
+2. `AGENTS.md`
+3. `docs/agent/current-state.md`
+4. `Changing Description.txt` only if historical detail is needed
+5. the active chapter file or folder
+
+This keeps durable rules, operational routing, and current working context
+separate.
+
 ## File Map
 
 Top-level files and folders:
@@ -150,9 +163,13 @@ Top-level files and folders:
   - Ignore rules for local environments, temp data, outputs, and IDE files.
 - `README.md`
   - This project working guide and AI-agent rule source of truth.
+- `AGENTS.md`
+  - Short operational routing rules for AI agents in this repo.
 - `Changing Description.txt`
   - The single official project change log. Update it after completed work,
-    especially before pushing to GitHub.
+  especially before pushing to GitHub.
+- `docs/agent/current-state.md`
+  - Short current-status handoff file for active work context.
 - `environment.yml`
   - Baseline Conda environment manifest for recreating `d2l_ai`.
 - `tensor_lab.py`
@@ -177,20 +194,22 @@ Files inside `ch02_preliminaries/`:
 If you are an AI agent working in this repo:
 
 1. Read this README first.
-2. Treat this README as the single source of truth for project rules.
-3. Stay inside `Project/Dive-into-Deep-Learning/` unless a human explicitly
+2. Read `AGENTS.md` next for routing, scope, and plugin preferences.
+3. Read `docs/agent/current-state.md` for active handoff context.
+4. Treat this README as the single source of truth for durable project rules.
+5. Stay inside `Project/Dive-into-Deep-Learning/` unless a human explicitly
    asks you to touch something else.
-4. Preserve the chapter-oriented structure.
-5. Create or update one dedicated chapter path per D2L chapter.
-6. Ensure each chapter has at least one clearly named source file.
-7. Put outputs in `output/`, not beside source scripts.
-8. Prefer repo-relative paths in scripts, notes, and instructions.
-9. Do not add large datasets, checkpoints, or model artifacts casually.
-10. Do not silently replace the learning style of the repo with a production
+6. Preserve the chapter-oriented structure.
+7. Create or update one dedicated chapter path per D2L chapter.
+8. Ensure each chapter has at least one clearly named source file.
+9. Put outputs in `output/`, not beside source scripts.
+10. Prefer repo-relative paths in scripts, notes, and instructions.
+11. Do not add large datasets, checkpoints, or model artifacts casually.
+12. Do not silently replace the learning style of the repo with a production
    architecture.
-11. Update `Changing Description.txt` after meaningful completed work,
+13. Update `Changing Description.txt` after meaningful completed work,
     especially before push.
-12. If you change the workflow or structure, update this README in the same
+14. If you change the workflow or structure, update this README in the same
     task.
 
 ## Before Push Checklist
